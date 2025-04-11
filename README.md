@@ -1,14 +1,3 @@
-<div align="center">
-<a href="https://www.instagram.com/genieincodebottle/"><img width="200" src="https://github.com/genieincodebottle/generative-ai/blob/main/images/logo_genie_new.png"></a>
-</div>
-<br>
-
-<div align="center">
-    <a target="_blank" href="https://www.youtube.com/@genieincodebottle"><img src="https://img.shields.io/badge/YouTube-@genieincodebottle-blue"></a>&nbsp;
-    <a target="_blank" href="https://www.linkedin.com/in/rajesh-srivastava"><img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social"></a>&nbsp;
-    <a target="_blank" href="https://www.instagram.com/genieincodebottle/"><img src="https://img.shields.io/badge/@genieincodebottle-C13584?style=flat-square&labelColor=C13584&logo=instagram&logoColor=white&link=https://www.instagram.com/eduardopiresbr/"></a>&nbsp;
-    <a target="_blank" href="https://github.com/genieincodebottle/generative-ai/blob/main/GenAI_Roadmap.md"><img src="https://img.shields.io/badge/style--5eba00.svg?label=GenAI Roadmap&logo=github&style=social"></a>
-</div>
 
 ## A. 🖼️ [OCR with Multimodal | Vision Language Models](/vlm_ocr/)
 
@@ -16,7 +5,7 @@
 
 A Comprehensive example codes for extracting content from complex PDFs with mixed elements, including text and image data extraction
 
-Also, check -> [Pdf Parsing Guide](https://github.com/genieincodebottle/parse-my-pdf/blob/main/pdf-parsing-guide.pdf)
+Also, check -> [Pdf Parsing Guide](pdf-parsing-guide.pdf)
 
 ### 📦 Implementation Options
 
@@ -108,21 +97,16 @@ python-dotenv>=1.0.1
    - pip (Python package installer)
 
 - #### Installation
-   1. Clone the repository:
-      ```bash
-      git clone https://github.com/genieincodebottle/parsemypdf.git
-      cd parsemypdf
-      ```
-   2. Create a virtual environment:
+   1. Create a virtual environment:
       ```bash
       python -m venv venv
       venv\Scripts\activate # On Linux -> source venv/bin/activate
       ```
-   3. Install dependencies:
+   2. Install dependencies:
       ```bash
       pip install -r requirements.txt
       ```
-   4. Rename `.env.example` to `.env` and update required Environment Variables as per requirements
+   3. Rename `.env.example` to `.env` and update required Environment Variables as per requirements
       ```bash
       GROQ_API_KEY=your_key_here    # For Groq based open source models
       ANTHROPIC_API_KEY=your_key_here    # For Claude
@@ -150,7 +134,7 @@ python-dotenv>=1.0.1
 
       For **OMNI_API_KEY** follow this -> https://app.getomni.ai/settings/account
 
-  5. Install Ollama & Models (for local processing)
+  4. Install Ollama & Models (for local processing)
       - Install Ollama
          - For Window - Download the Ollama from following location (Requires Window 10 or later) -> https://ollama.com/download/windows
          - For Linux (command line) - curl https://ollama.ai/install.sh | sh
@@ -159,18 +143,18 @@ python-dotenv>=1.0.1
          - ollama pull llama3.1
          - ollama pull x/llama3.2-vision:11b
 
-  6. For running each parser individually
+  5. For running each parser individually
       - Place PDF files in `input/` directory
       - You can run and test different type of parser available in "parser" folder.
 
-  7. Example Complex Pdf placed in Input folder(You can use your own pdf)
+  6. Example Complex Pdf placed in Input folder(You can use your own pdf)
       - **sample-1.pdf**: Standard tables
       - **sample-2.pdf**: Image-based simple tables
       - **sample-3.pdf**: Image-based complex tables
       - **sample-4.pdf**: Mixed content (text, tables, images)
       - **sample-5.pdf**: Multi-column Texts 
   
-  8. To check all parsers at Web UI, run following command at "parsemypdf" folder
+  7. To check all parsers at Web UI, run following command at "parsemypdf" folder
       -  streamlit run pdf_parser_app.py
 
       <img src="images/ui.png" alt="UI"/>
